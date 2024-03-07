@@ -8,19 +8,29 @@
 * Licenc: GNU GPL
 */
 
-function hurnegyszog() {
+const calcButton = document.querySelector("#calcButton");
+
+calcButton.addEventListener('click', () => {
+    startCalc();
+});
+
+function startCalc() {
     let a = parseFloat(document.getElementById('side1').value);
     let b = parseFloat(document.getElementById('side2').value);
     let c = parseFloat(document.getElementById('side3').value);
     let d = parseFloat(document.getElementById('side4').value);
-}
-calcButton.addEventListener('click', ()=> {
-    startCalc();
-});
 
-function hurnegyszog (a, b, c, d)
+    let area = calculatearea(a,b,c,d);
+
+    const perimeter = document.querySelector("#perimeter");
+    perimeter.textContent = area;
+
+}
+
+
+function calculatearea (a, b, c, d)
 {
-    let s= (a + b + c + d) / 2;
-    let terulet = Math.sqrt((s - a) * (s - b) * (s - c) * (s - d));
-    return terulet;
+    let s= (a+b+c+d) / 2;
+    let area = Math.sqrt((s-a) * (s-b) * (s-c) * (s-d));
+    return area;
 }
