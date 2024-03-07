@@ -1,0 +1,60 @@
+<!--
+File: index.html
+Author: Teleki Panna
+Copyright: 2021, Teleki Panna
+Group: Szoft I-1-N
+Date: 2024-03-07
+Github: https://github.com/itspanna
+Licenc: GNU GPL
+-->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Húrnégyszög</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hurnegy">
+            <div class="input">
+                <label for="side1">A oldal</label>
+            </div>
+            <div class="input">
+                <label for="side2">B oldal</label>
+                <input 
+                    type="text"
+                    class="form control"
+                    id="side" required>
+            </div>
+            <div class="input">
+                <label for="side3">C oldal</label>
+                <input 
+                type="text"
+                class="form control"
+                id="side" required>
+            </div>
+            <div class="input">
+                <label for="side4">D oldal</label>
+                <input 
+                type="text"
+                class="form control"
+                id="side" required>
+            </div>
+            <div>
+                <button id="calcButton" class="btn btn-primary">Számít</button>
+            </div>
+            <div class="input">
+                <label for="perimeter">Húrnégyszög területe</label>
+                <input 
+                type="text" 
+                class= "form-control"
+                id="perimeter" readonly>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
